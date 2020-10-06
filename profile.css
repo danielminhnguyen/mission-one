@@ -75,6 +75,9 @@ li {
 
 .section-container {
     position: relative;
+    width: 100%;
+
+
 }
 
 .section-title * {
@@ -452,11 +455,63 @@ nav a:hover {
 }
 
 /* Porfolio */
+#portfolio ul {
+    width: 100%;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+#portfolio img {
+    display: block;
+    width: 400px;
+    height: 400px;
+    transition: .5s ease;
+}
+
+#portfolio .section-content li:hover img{
+    opacity:  0.3;
+}
+
+#portfolio .section-content li {
+    position: relative;
+    width: 400px;
+    height: 400px;
+}   
+
+#portfolio .section-content div{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}   
+
+#portfolio .image-title  span {
+    opacity: 0;
+    color: white;
+    font: 2em;
+    background-color: cornflowerblue;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    white-space: nowrap;    
+}
+
+#portfolio .section-content li:hover span{
+    opacity: 1;
+}
+
+
+#portfolio .section-content ul{
+  
+}
+
 
 /* Contact */
 
 #contact {
     background-color: #061425;
+    padding: 1em;
 }
 
 #contact .section-title {
@@ -508,20 +563,7 @@ nav a:hover {
     transition: all 0.5s;
 }
 
-footer {
-    background-color: #061425;
-    padding-bottom: 1vh;
-}
 
-.fa {
-    color: white;
-    margin: auto 0.2em;
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-}
 
 .fa:hover, .fa:focus, .fa:active {
     -webkit-animation-name: hvr-pulse-grow;
@@ -545,16 +587,26 @@ footer {
 
 @keyframes hvr-pulse-grow {
     to {
-        -webkit-transform: scale(1.1);
-        transform: scale(1.1);
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
     }
+}
+
+.fa {
+    color: white;
+    margin: auto 0.2em;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
 }
 
 footer {
     background-color: #00587a;
+    padding: 2em ;
 }
 
-#social-icons {
+footer h6 {
+    font-size: 1.2em;
+    color: white;
+    margin-bottom: 1em;
+}
 
-}    
 

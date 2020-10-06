@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="profile.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans"/>
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Raleway" />
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <style>
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div id="home"></div>
+        <div id="intro">
+            <p>Hello, I am <b style="color: #7298c2;">Daniel Nguyen</b></p>
+            <p>I am a full stack web developer</p>
+        </div>
+        <!-- Animated Background -->
+        <div id="glowing-containter">
+            <div class="glowing">
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
+            </div>
+            <div class="glowing">
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
+            </div>
+            <div class="glowing">
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
+            </div>
+            <div class="glowing">
+                <span style="--i:1;"></span>
+                <span style="--i:2;"></span>
+                <span style="--i:3;"></span>
+            </div>
+        </div>
+    
+        <!-- <div id="gradient-background"></div> -->    
+    </header>
+    <!-- Navigation bar -->
+    
+    <nav id="navigation">
+        <ul>
+            <li><a id="header-home" class="button-one" href="#home">home</a></li>
+            <li><a id="header-about" class="button-one" href="#about">about</a></li>
+            <li><a id="header-portfolio" class="button-one" href="#portfolio">portfolio</a></li>
+            <li><a id="header-blog" class="button-one" href="#blog">blog</a></li>
+            <li><a id="header-contact" class="button-one" href="#contact">contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="content">
+        <!-- ABOUT -->
+        <section id="about" class="section-container flex-column">
+            <div class="section-title flex-column"><h1 class="flex-column">about</h1></div>
+            <div class="section-content flex-row">
+                <div id="about-left">
+                    <img class="photo" src="me.png" sizes="40px">
+                    <h5>Who am I?</h5>
+                    <p>I am future front end web developer. Currently undertaking Full Stack 
+                        Web Developer Course from Mission Ready.
+
+                    </p>
+                </div>
+                <div id="about-right">
+                    <div class="skills-container flex-column">
+                        <div class="skills-bar flex-column">
+                            <div class="skills-fill" style="width: 50%;">
+                                <div class="skills-tittle flex-column">Python</div>
+                            </div>
+                            <span>50%</span>
+                        </div>
+                        <div class="skills-bar flex-column">
+                            <div class="skills-fill" style="width: 30%;">
+                                <div class="skills-tittle flex-column">HTML</div>
+                            </div>
+                            <span>30%</span>
+                        </div>
+                        <div class="skills-bar flex-column">
+                            <div class="skills-fill" style="width: 30%;">
+                                <div class="skills-tittle flex-column">CSS</div>
+                            </div>
+                            <span>30%</span>
+                        </div>
+                        <div class="skills-bar flex-column">
+                            <div class="skills-fill" style="width: 40%;">
+                                <div class="skills-tittle flex-column">Photoshop</div>
+                            </div>
+                            <span>40%</span>
+                        </div>
+                        <div class="skills-bar flex-column">
+                            <div class="skills-fill" style="width: 40%;">
+                                <div class="skills-tittle flex-column">Illustrator</div>
+                            </div>
+                            <span>40%</span>
+                        </div>                    
+                        <div class="skills-bar flex-column">
+                            <div class="skills-fill" style="width: 40%;">
+                                <div class="skills-tittle flex-column">SQL</div>
+                            </div>
+                            <span>40%</span>
+                        </div>       
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="portfolio" class="section-container flex-column">
+            <div class="section-title flex-column"><h1 class="flex-column">portfolio</h1></div>
+            <div class="section-content flex-row">
+                <ul>
+                    <li>PORTFOLIO1</li>
+                    <li>PORTFOLIO1</li>
+                    <li>PORTFOLIO1</li>
+                </ul>
+            </div>
+        </section>
+    
+
+        <section id="blog" class="section-container flex-column">
+            <div class="section-title flex-column"><h1 class="flex-column">blog</h1></div>
+            <div class="section-content flex-row">
+                <div>BLOG1</div>
+                <div>BLOG2</div>
+                <div>BLOG3</div>
+            </div>
+        </section>
+    
+        <section id="contact" class="section-container flex-column">
+            <div class="section-title flex-column"><h1 class="flex-column">contact</h1></div>
+            <div class="section-content">
+                <form action="mailto:minhnguyen68@hotmail.com" class="flex-column" id="form-contact" method="POST">
+                    <input type="text" id="contact-name" placeholder="Name">
+                    <input type="text" id="contact-email" placeholder="Email">
+                    <textarea type="text" id="contact-message" placeholder="Message"></textarea>
+                    <input class="button1" type="submit" value="submit">
+                </form>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="flex-row">
+        <div id="social-icons"><h6>Connect with me</h6>
+        
+        <a href="https://facebook.com"><i class="fa fa-facebook-square fa-2x"></i></a>
+        <a href="https://linkedin.com"><i class="fa fa-linkedin-square fa-2x"></i></a>
+        </div>
+
+    </footer>
+
+    
+    <script src="profile.js"></script>
+    
+</body>
+
+<!-- Problem
+Make Full with Navigation Bar
+
+
+-->

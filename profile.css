@@ -28,7 +28,7 @@ body {
         font-size: 1.4;
     }
 }
-
+ 
 @media (max-width: 800px) {
     .body {
         font-size: 1.4;
@@ -42,7 +42,7 @@ body {
 }
 
 @media (max-width: 350) {
-    .body *{
+    .body * {
         font-size: 0.1vw;
     }
 }
@@ -76,19 +76,35 @@ li {
 .section-container {
     position: relative;
     width: 100%;
-
-
 }
+
+/* Section Title */
 
 .section-title * {
     position: relative;
+}
+
+.section-title h1 {
+    font-weight: bold;
+    font-size: 1.5em;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.section-title h1:after {
+    background: none repeat scroll 0 0 #318fb5;
+    bottom: -5px;
+    content: "";
+    height: 2px;
+    position: relative;
+    width: 40px;
 }
 
 .section-content {
     width: 100%;
     margin: 0.5em 1em;
     flex-wrap: wrap;
-
 }
 
 .section-content h5 {
@@ -96,7 +112,7 @@ li {
     font-weight: bold;
 }
 
-.section-content > div {
+.section-content>div {
     margin: 1em 1em;
     width: 400px !important;
 }
@@ -110,7 +126,6 @@ li {
 .button-one {
     transition: all 0.4s;
     position: relative;
-    
 }
 
 .button-one::before {
@@ -130,8 +145,8 @@ li {
 }
 
 .button-one:hover::before {
-    opacity: 1; 
-    transform: scale(1, 1); 
+    opacity: 1;
+    transform: scale(1, 1);
     color: #d7385e;
 }
 
@@ -144,31 +159,30 @@ li {
     height: 100%;
     z-index: 1;
     transition: all 0.4s;
-    
 }
+
 .button-one:hover::after {
-    opacity: 0; 
+    opacity: 0;
     transform: scale(0.1, 1);
 }
 
+/* Buttone 2 */
 
-/* Section Title */
-
-.section-title h1 {
-    font-weight: bold;
-    font-size: 1.5em;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    text-transform: uppercase;
+.button-two {
+    display: inline-block;
+    padding: 0.26em 0.8em;
+    border: 0.1em solid #a0a0a0;
+    margin: 1em 0.2em 0.2em 0;
+    border-radius: 0.5em;
+    text-decoration: none;
+    color: #a0a0a0;
+    transition: all 0.15s;
 }
 
-.section-title h1:after {
-    background: none repeat scroll 0 0 #318fb5;
-    bottom: -5px;
-    content: "";
-    height: 2px;
-    position: relative;
-    width: 40px;
+.button-two:hover {
+    text-shadow: 0 0 2em rgba(255, 255, 255, 1);
+    color: #b1252c;
+    border-color: #FFFFFF;
 }
 
 /* Header */
@@ -350,7 +364,7 @@ nav a {
     color: inherit;
 }
 
-nav > a.active {
+nav>a::active {
     background: white !important;
     color: red !important;
 }
@@ -364,12 +378,13 @@ nav a:hover {
     position: fixed;
     top: 0;
     width: 100%;
-  }
-  
-  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-  .sticky + .content {
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+
+.sticky+.content {
     padding-top: 2em !important;
-  }
+}
 
 /* About Section9 */
 
@@ -444,7 +459,7 @@ nav a:hover {
 
 .skills-tittle {
     position: absolute;
-    font-size: 1.4vh !important ;
+    font-size: 1.4vh !important;
     top: 0;
     left: 0;
     color: white;
@@ -455,6 +470,7 @@ nav a:hover {
 }
 
 /* Porfolio */
+
 #portfolio ul {
     width: 100%;
     display: flex;
@@ -470,42 +486,38 @@ nav a:hover {
     transition: .5s ease;
 }
 
-#portfolio .section-content li:hover img{
-    opacity:  0.3;
+#portfolio .section-content li:hover img {
+    opacity: 0.3;
 }
 
 #portfolio .section-content li {
     position: relative;
     width: 400px;
     height: 400px;
-}   
+}
 
-#portfolio .section-content div{
+#portfolio .section-content div {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}   
+}
 
-#portfolio .image-title  span {
+#portfolio .image-title span {
     opacity: 0;
     color: white;
     font: 2em;
     background-color: cornflowerblue;
     padding: 10px 15px;
     font-size: 1.2em;
-    white-space: nowrap;    
+    white-space: nowrap;
 }
 
-#portfolio .section-content li:hover span{
+#portfolio .section-content li:hover span {
     opacity: 1;
 }
 
-
-#portfolio .section-content ul{
-  
-}
-
+#portfolio .section-content ul {}
 
 /* Contact */
 
@@ -563,11 +575,9 @@ nav a:hover {
     transition: all 0.5s;
 }
 
-
-
 .fa:hover, .fa:focus, .fa:active {
     -webkit-animation-name: hvr-pulse-grow;
-    animation-name: hvr-pulse-grow;
+    animation-name: hvrgit-pulse-grow;
     -webkit-animation-duration: 0.3s;
     animation-duration: 0.3s;
     -webkit-animation-timing-function: linear;
@@ -600,7 +610,7 @@ nav a:hover {
 
 footer {
     background-color: #00587a;
-    padding: 2em ;
+    padding: 2em;
 }
 
 footer h6 {
@@ -608,5 +618,3 @@ footer h6 {
     color: white;
     margin-bottom: 1em;
 }
-
-

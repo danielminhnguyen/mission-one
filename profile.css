@@ -1,13 +1,12 @@
-/*************/
-
 /* Site Wide */
-
-/*************/
 
 * {
     margin: 0;
     padding: 0;
-    font-family: "Raleway";
+    font-family: "Raleway", Arial, Helvetica, sans-serif;
+    color: inherit;
+    text-decoration: none;
+    list-style: none;
 }
 
 html, body {
@@ -15,20 +14,18 @@ html, body {
     width: 100%;
 }
 
-#home {
-    height: 100%;
-}
-
 body {
     font-size: calc(0.75em + 1vmin);
 }
+
+/* #region Responsive */
 
 @media (max-width: 1600px) {
     .body {
         font-size: 1.4;
     }
 }
- 
+
 @media (max-width: 800px) {
     .body {
         font-size: 1.4;
@@ -47,6 +44,8 @@ body {
     }
 }
 
+/* #endregion Responsive */
+
 .flex-column {
     display: flex;
     flex-direction: column;
@@ -63,22 +62,11 @@ body {
     position: relative
 }
 
-ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-li {
-    display: inline-block;
-}
-
 .section-container {
     position: relative;
     width: 100%;
+    padding-top: 2em;
 }
-
-/* Section Title */
 
 .section-title * {
     position: relative;
@@ -121,7 +109,7 @@ li {
     background-color: rgb(209, 209, 209);
 }
 
-/* Button */
+/* #region Buttons Styling*/
 
 .button-one {
     transition: all 0.4s;
@@ -169,6 +157,7 @@ li {
 /* Buttone 2 */
 
 .button-two {
+    font-size: 16px;
     display: inline-block;
     padding: 0.26em 0.8em;
     border: 0.1em solid #a0a0a0;
@@ -185,30 +174,22 @@ li {
     border-color: #FFFFFF;
 }
 
+/* #endregion Buttons Styling */
+
 /* Header */
 
-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+header #home {
+    height: 100%;
 }
 
-/* Introduction */
-
-#intro {
+header #intro {
     position: absolute;
     text-align: center;
     color: white;
     font-size: 1.6em;
 }
 
-/*************/
-
-/* Animation */
-
-/*************/
+/*#region Animation */
 
 /* Gradient Background */
 
@@ -336,27 +317,90 @@ header {
     }
 }
 
-/* Animation END */
+/*#endregion Animation END */
 
-/* Navigation bar section */
+/*#region Navigtation*/
 
-nav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100% !important;
-    height: 2em;
-    position: relative;
-    background-color: #0f3057;
-    color: white;
-    border-bottom: 3px solid #008891;
-    text-transform: uppercase;
-    overflow: hidden;
-    z-index: 5;
+@media screen and (max-width: 600px) {
+    .topnav-links {
+        width: 60%;
+    }
 }
 
-nav a {
-    margin: 0px 1em;
+@media screen and (max-width: 600px) {
+    .burger {
+        display: block !important;
+    }
+    .mobile-nav-wrap {
+        flex-direction: column;
+        background-color: #222222;
+        display: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        width: 100%;
+        transform: translateY(40px);
+    }
+    .topnav-links li {
+        position: relative;
+        top: 0;
+        left: 0;
+        background-color: #005582;
+        height: 40px;
+        width: 100%;
+        align-content: center;
+        overflow: visible !important;
+    }
+
+    .topnav-links a {
+        margin: 0 !important;
+        color: white;
+        display: block;
+        padding: 15px 0;
+        text-align: center;
+        text-decoration: none;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    .topnav.open {
+        margin-bottom: 120px;   
+
+    }
+}
+
+.topnav {
+    height: 40px;
+    align-items: center;
+    text-transform: uppercase;
+    position: relative;
+    flex: 1;
+    background-color: #0f3057;
+    z-index: 9;
+}
+
+.topnav-background {
+    position: absolute;
+    background-color: #0f3057;
+    height: 40px;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.topnav .topnav-links {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 40px;
+    width: 100%;
+    background-color: #0f3057;
+    color: white;
+    transform-origin: top;
+    z-index: 3;
+}
+
+.topnav .topnav-links a {
+    margin: 0px 2em;
     padding: 2px;
     color: white;
     width: 100%;
@@ -364,15 +408,48 @@ nav a {
     color: inherit;
 }
 
-nav>a::active {
-    background: white !important;
-    color: red !important;
-}
-
-nav a:hover {
+.topnav .topnav-links a:hover {
     color: #d7385e;
     border-color: red;
 }
+
+.topnav .burger {
+    display: none;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.line {
+    height: 2px;
+    width: 35px;
+    margin: 0.5rem 0;
+    background: #daf8e3;
+    transition: transform 0.75s ease, opacity 0.75s ease;
+}
+
+.open {
+    margin: 0;
+}  
+
+.show {
+    display: block;
+}
+
+.topnav.open .line1 {
+    transform: translate(-10px) rotate(45deg) translate(15px);
+}
+
+.topnav.open .line2 {
+    opacity: 0;
+}
+
+.topnav.open .line3 {
+    transform: translate(-10px) rotate(-45deg) translate(15px);
+}
+
+/* Mobile Menu */
+
+/*  Sitcky class for Navigation*/
 
 .sticky {
     position: fixed;
@@ -380,13 +457,13 @@ nav a:hover {
     width: 100%;
 }
 
-/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
-
 .sticky+.content {
     padding-top: 2em !important;
 }
 
-/* About Section9 */
+/*#endregion Navigation*/
+
+/*#region Section - About */
 
 #about-left {
     position: relative;
@@ -469,7 +546,9 @@ nav a:hover {
     font-weight: bold;
 }
 
-/* Porfolio */
+/* #endregion Section - About */
+
+/*#region Portfolio*/
 
 #portfolio ul {
     width: 100%;
@@ -517,13 +596,14 @@ nav a:hover {
     opacity: 1;
 }
 
-#portfolio .section-content ul {}
+/* #endregion Section - About */
 
 /* Contact */
 
 #contact {
     background-color: #16335a;
     padding: 1em;
+    height: 60vh;
 }
 
 #contact .section-title {

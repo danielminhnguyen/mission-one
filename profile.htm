@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="flex-column">
         <div id="home"></div>
         <div id="intro">
             <p>Hello, I am <b style="color: #7298c2;">Daniel Nguyen</b></p>
@@ -50,13 +50,19 @@
     </header>
     <!-- Navigation bar -->
     
-    <nav id="navigation">
-        <ul>
+    <nav class="topnav flex-row" id="navigation">
+        <ul class="topnav-links flex-row mobile-nav-wrap" id="nav-wrap">
             <li><a id="header-home" class="button-one" href="#home">home</a></li>
             <li><a id="header-about" class="button-one" href="#about">about</a></li>
             <li><a id="header-portfolio" class="button-one" href="#portfolio">portfolio</a></li>
             <li><a id="header-contact" class="button-one" href="#contact">contact</a></li>
+            
         </ul>
+        <a id="js-toggle-menu" class="mobile-menu-toggle burger" onclick="menuToggle()"">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+        </a>
     </nav>
 
     <div class="content">
@@ -70,8 +76,6 @@
                     <p>I am future front end web developer. </br>
                         Currently undertaking Full Stack 
                         Web Developer Course from Mission Ready.
-
-
                     </p>
                 </div>
                 <div id="about-right">

@@ -65,7 +65,7 @@ body {
 .section-container {
     position: relative;
     width: 100%;
-    padding-top: 2em;
+    padding-top: 50px;
 }
 
 .section-title * {
@@ -114,21 +114,20 @@ body {
 .button-one {
     transition: all 0.4s;
     position: relative;
+    padding-left: 10px;
 }
 
 .button-one::before {
     content: '';
     position: absolute;
-    bottom: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 1;
     opacity: 0;
-    transition: all 0.4s;
-    padding-left: 2px;
-    border-left-width: 2px;
-    border-left-style: solid;
+    transition: all 0.8s;
+    padding-left: 15px !important;
+    border-left: solid 4px #d7385e;
     transform: scale(1, 0.11);
 }
 
@@ -136,22 +135,6 @@ body {
     opacity: 1;
     transform: scale(1, 1);
     color: #d7385e;
-}
-
-.button-one::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    transition: all 0.4s;
-}
-
-.button-one:hover::after {
-    opacity: 0;
-    transform: scale(0.1, 1);
 }
 
 /* Buttone 2 */
@@ -355,6 +338,7 @@ header #intro {
     .topnav-links a {
         margin: 0 !important;
         color: white;
+        position: relative;
         display: block;
         padding: 15px 0;
         text-align: center;
@@ -368,7 +352,7 @@ header #intro {
     }
 }
 
-.topnav {
+#navigation {
     height: 40px;
     align-items: center;
     text-transform: uppercase;
@@ -376,6 +360,7 @@ header #intro {
     flex: 1;
     background-color: #0f3057;
     z-index: 9;
+    border-bottom: solid 3px #008891;
 }
 
 .topnav-background {
@@ -397,20 +382,37 @@ header #intro {
     color: white;
     transform-origin: top;
     z-index: 3;
+    
+}
+
+.linkfocus {
+    color: #d7385e !important;
+}
+
+.linkfocus::before{
+    height: 100%;
+    width: 100%;
+    content: '';
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    opacity: 1;
+    transition: all 0.8s;
+    padding-left: 15px !important;
+    border-left: solid 4px #d7385e !important;
+    transform: scale(1, 1);
+    
 }
 
 .topnav .topnav-links a {
-    margin: 0px 2em;
-    padding: 2px;
-    color: white;
+    margin: 0px 2em; 
     width: 100%;
     text-decoration: none;
     color: inherit;
 }
 
 .topnav .topnav-links a:hover {
-    color: #d7385e;
-    border-color: red;
+    color: #b1252c;
 }
 
 .topnav .burger {
@@ -452,7 +454,7 @@ header #intro {
 /*  Sitcky class for Navigation*/
 
 .sticky {
-    position: fixed;
+    position: fixed !important;
     top: 0;
     width: 100%;
 }
@@ -602,7 +604,6 @@ header #intro {
 
 #contact {
     background-color: #16335a;
-    padding: 1em;
     height: 60vh;
 }
 
@@ -708,4 +709,8 @@ footer h6 {
 
 .info-box span {
     color: rgb(179, 0, 0);
+}
+
+.social-icons {
+    flex: 1;
 }

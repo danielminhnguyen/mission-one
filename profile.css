@@ -70,6 +70,7 @@ body {
 
 .section-title * {
     position: relative;
+    margin-bottom: 50px;
 }
 
 .section-title h1 {
@@ -304,11 +305,11 @@ header #intro {
 
 /*#region Navigtation*/
 
-@media screen and (max-width: 600px) {
+/* @media screen and (max-width: 600px) {
     .topnav-links {
         width: 60%;
     }
-}
+} */
 
 @media screen and (max-width: 600px) {
     .burger {
@@ -340,11 +341,13 @@ header #intro {
         color: white;
         position: relative;
         display: block;
-        padding: 15px 0;
+        top: 50%;
+        transform: translateY(-50%);
         text-align: center;
         text-decoration: none;
         transition: all 0.3s ease-in-out;
     }
+
     
     .topnav.open {
         margin-bottom: 120px;   
@@ -604,11 +607,12 @@ header #intro {
 
 #contact {
     background-color: #16335a;
-    height: 60vh;
+    padding-bottom: 50px;
 }
 
 #contact .section-title {
     color: white;
+    margin-bottom: 20px;
 }
 
 #form-contact>input, textarea {
@@ -620,9 +624,21 @@ header #intro {
     color: white;
 }
 
+#form-contact>input, textarea {
+    margin: 0.2em;
+    width: 40vw;
+    height: 4vw;
+    font-size: 1em;
+    background-color: #091f3b;
+    color: white;
+    border: none;
+}
+
+
 #form-contact>input:focus, textarea:focus {
     outline: none;
-    caret-color: red;
+    caret-color: #d7385e;
+    border-bottom: solid 1px #d7385e;
 }
 
 #form-contact ::placeholder {
